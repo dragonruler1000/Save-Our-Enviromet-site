@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Research</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Plastic Crisis</h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="solution.html">Solution</a>
+        </div>
+    </nav>
+
+    <section>
+        <h1>Research</h1>
+
+        <div class="card">
+            <h3>Background</h3>
+            <p>Plastic waste has increased rapidly since the 1950s due to mass production and single-use culture.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Plastic Production</h2>
+        <canvas id="chart1"></canvas>
+        <p>Plastic production has grown exponentially, showing increasing environmental pressure.</p>
+    </section>
+
+    <section>
+        <h2>Waste Distribution</h2>
+        <canvas id="chart2"></canvas>
+        <p>Only about 9% of plastic is recycled, highlighting inefficiencies in current systems.</p>
+    </section>
+
+    <script>
+        new Chart(document.getElementById('chart1'), {
+            type: 'line',
+            data: {
+                labels: ['1950', '1970', '1990', '2010', '2020'],
+                datasets: [{ data: [2, 35, 100, 270, 400] }]
+            }
+        });
+
+        new Chart(document.getElementById('chart2'), {
+            type: 'pie',
+            data: {
+                labels: ['Recycled', 'Incinerated', 'Landfilled'],
+                datasets: [{ data: [9, 19, 72] }]
+            }
+        });
+    </script>
+
+</body>
+
+</html>
